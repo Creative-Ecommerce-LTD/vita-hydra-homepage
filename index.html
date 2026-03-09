@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vita hydra™ — Hydrate. Recharge. Thrive.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       VITA HYDRA — HOMEPAGE DESIGN PROTOTYPE
+       Brand: Vita Hydra™
+       Colours: Forest Green #33473B | Coral #FE7144 | Mint #C2F1AB
+                Light Blue #D9E7FF | Electric Blue #334FD7
+                Peach #FEEAD2 | Soft Purple #C8B1FF | Lime #E0E447
+       Fonts: Scotch Display (serif display) + Host Grotesk (sans)
+       Template: Creative Ecommerce FG - Manus (Daisy UI)
+    ============================================================ */
+
+    :root {
+      --green:   #33473B;
+      --coral:   #FE7144;
+      --mint:    #C2F1AB;
+      --lblue:   #D9E7FF;
+      --eblue:   #334FD7;
+      --peach:   #FEEAD2;
+      --purple:  #C8B1FF;
+      --lime:    #E0E447;
+      --pink:    #FFABFF;
+      --cream:   #F9F6F1;
+      --white:   #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Host Grotesk', sans-serif;
+      color: var(--green);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* Scotch Display fallback — using Georgia as closest system serif */
+    .display {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+    }
+
+    /* ── PROMOBAR ─────────────────────────────────────────────── */
+    .promobar {
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .promobar span { color: var(--mint); margin: 0 8px; }
+
+    /* ── NAVIGATION ───────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(51,71,59,0.08);
+      padding: 0 64px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+      text-decoration: none;
+    }
+    .nav-logo .vita {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 26px;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo .hydra {
+      font-family: 'Host Grotesk', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: -0.01em;
+    }
+    .nav-logo sup { font-size: 10px; vertical-align: super; margin-left: 1px; }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.6; }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-actions a {
+      text-decoration: none;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .btn-nav {
+      background: var(--green);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      min-height: 88vh;
+      background: var(--lblue);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 80px 64px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,177,255,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 30%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(194,241,171,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { max-width: 580px; position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid rgba(51,71,59,0.15);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      background: var(--coral);
+      border-radius: 50%;
+    }
+    .hero-stars {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .stars { color: #F5A623; font-size: 16px; letter-spacing: 1px; }
+    .hero-stars span { font-size: 13px; color: rgba(51,71,59,0.7); }
+    .hero-stars strong { color: var(--green); }
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: 72px;
+      line-height: 1.05;
+      color: var(--green);
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--coral) 0%, var(--purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.65;
+      color: rgba(51,71,59,0.75);
+      margin-bottom: 40px;
+      max-width: 460px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(51,71,59,0.25); }
+    .btn-secondary {
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 0;
+    }
+    .btn-secondary::after { content: '→'; font-size: 18px; }
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 580px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    /* ── TRUST STRIP ──────────────────────────────────────────── */
+    .trust-strip {
+      background: var(--white);
+      border-bottom: 1px solid rgba(51,71,59,0.08);
+      padding: 20px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .trust-item .icon {
+      width: 20px; height: 20px;
+      background: var(--mint);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+    .trust-divider { color: rgba(51,71,59,0.2); font-size: 20px; }
+
+    /* ── SECTION HEADERS ──────────────────────────────────────── */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: Georgia, serif;
+      font-size: 52px;
+      line-height: 1.1;
+      color: var(--green);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(51,71,59,0.65);
+      max-width: 520px;
+    }
+
+    /* ── FLAVOURS SECTION ─────────────────────────────────────── */
+    .flavours {
+      padding: 100px 64px;
+      background: var(--cream);
+    }
+    .flavours-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .flavours-header .section-sub { margin: 0 auto; }
+    .flavours-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .flavour-card {
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .flavour-card:hover { transform: translateY(-8px); }
+    .flavour-card .card-bg {
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .card-citrus .card-bg { background: linear-gradient(160deg, #FEEAD2 0%, #FE7144 100%); }
+    .card-berry .card-bg  { background: linear-gradient(160deg, #C8B1FF 0%, #FFABFF 100%); }
+    .card-tropical .card-bg { background: linear-gradient(160deg, #C2F1AB 0%, #D9E7FF 100%); }
+    .flavour-card .sachet-visual {
+      width: 80px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 12px 12px 8px 8px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.5);
+      position: relative;
+    }
+    .sachet-top {
+      position: absolute;
+      top: -12px;
+      width: 80px;
+      height: 20px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 8px 8px 0 0;
+      border-bottom: 2px dashed rgba(255,255,255,0.6);
+    }
+    .sachet-logo {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 11px;
+      color: var(--green);
+      text-align: center;
+      line-height: 1.3;
+      padding: 0 8px;
+    }
+    .sachet-logo .hydra-text {
+      font-style: normal;
+      font-family: 'Host Grotesk', sans-serif;
+      font-weight: 500;
+    }
+    .sachet-flavour {
+      font-family: 'Host Grotesk', sans-serif;
+      font-size: 9px;
+      color: rgba(51,71,59,0.7);
+      text-align: center;
+      margin-top: 4px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      letter-spacing: 0.06em;
+    }
+    .card-info {
+      padding: 24px;
+      background: var(--white);
+    }
+    .card-info .flavour-name {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .card-info .flavour-desc {
+      font-size: 14px;
+      color: rgba(51,71,59,0.65);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .card-info .flavour-price {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green);
+    }
+    .card-info .flavour-price .original {
+      text-decoration: line-through;
+      color: rgba(51,71,59,0.4);
+      font-weight: 400;
+      margin-right: 6px;
+    }
+    .card-info .flavour-price .badge {
+      background: var(--mint);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 100px;
+      margin-left: 8px;
+      letter-spacing: 0.04em;
+    }
+    .btn-card {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+      padding: 13px;
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      font-family: 'Host Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-card:hover { opacity: 0.85; }
+
+    /* ── BENEFITS ─────────────────────────────────────────────── */
+    .benefits {
+      padding: 100px 64px;
+      background: var(--green);
+      color: var(--white);
+    }
+    .benefits-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .benefits-content .section-label { color: var(--mint); }
+    .benefits-content .section-title { color: var(--white); }
+    .benefits-content .section-sub { color: rgba(255,255,255,0.65); }
+    .benefits-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .benefit-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .benefit-text h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .benefit-text p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.55;
+    }
+    .benefits-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 32px 28px;
+    }
+    .stat-card .stat-number {
+      font-family: Georgia, serif;
+      font-size: 56px;
+      line-height: 1;
+      color: var(--mint);
+      margin-bottom: 8px;
+    }
+    .stat-card .stat-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+    }
+
+    /* ── HOW IT WORKS ─────────────────────────────────────────── */
+    .how-it-works {
+      padding: 100px 64px;
+      background: var(--white);
+    }
+    .hiw-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hiw-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .hiw-header .section-sub { margin: 0 auto; }
+    .hiw-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      position: relative;
+    }
+    .hiw-steps::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: calc(16.66% + 24px);
+      right: calc(16.66% + 24px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--mint), var(--purple), var(--coral));
+    }
+    .hiw-step {
+      text-align: center;
+      position: relative;
+    }
+    .step-number {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-family: Georgia, serif;
+      font-size: 36px;
+      color: var(--green);
+      position: relative;
+      z-index: 1;
+    }
+    .step-1 .step-number { background: var(--mint); }
+    .step-2 .step-number { background: var(--purple); }
+    .step-3 .step-number { background: var(--coral); color: var(--white); }
+    .hiw-step h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .hiw-step p {
+      font-size: 15px;
+      color: rgba(51,71,59,0.65);
+      line-height: 1.65;
+    }
+
+    /* ── SOCIAL PROOF / PRESS ─────────────────────────────────── */
+    .press {
+      padding: 60px 64px;
+      background: var(--cream);
+      text-align: center;
+    }
+    .press-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(51,71,59,0.45);
+      margin-bottom: 32px;
+    }
+    .press-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+      flex-wrap: wrap;
+    }
+    .press-logo {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(51,71,59,0.3);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    /* ── TESTIMONIALS ─────────────────────────────────────────── */
+    .testimonials {
+      padding: 100px 64px;
+      background: var(--lblue);
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .testimonials-header .section-sub { margin: 0 auto; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .review-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .review-stars { color: #F5A623; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--green);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--green);
+    }
+    .av-1 { background: var(--mint); }
+    .av-2 { background: var(--peach); }
+    .av-3 { background: var(--purple); }
+    .review-author-info .name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .review-author-info .verified {
+      font-size: 12px;
+      color: rgba(51,71,59,0.5);
+    }
+
+    /* ── PRODUCT LIFESTYLE ────────────────────────────────────── */
+    .lifestyle {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      height: 600px;
+    }
+    .lifestyle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .lifestyle-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(51,71,59,0.75) 0%, transparent 60%);
+      display: flex;
+      align-items: center;
+      padding: 80px;
+    }
+    .lifestyle-content { max-width: 520px; }
+    .lifestyle-content .section-label { color: var(--mint); }
+    .lifestyle-content .section-title { color: var(--white); font-size: 56px; }
+    .lifestyle-content .section-sub { color: rgba(255,255,255,0.75); margin-bottom: 40px; }
+
+    /* ── EMAIL CAPTURE ────────────────────────────────────────── */
+    .email-capture {
+      padding: 80px 64px;
+      background: var(--peach);
+      text-align: center;
+    }
+    .email-capture .section-title { font-size: 44px; margin-bottom: 12px; }
+    .email-capture .section-sub { margin: 0 auto 40px; }
+    .email-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .email-form input {
+      flex: 1;
+      padding: 16px 20px;
+      border: 1.5px solid rgba(51,71,59,0.2);
+      border-radius: 100px;
+      font-family: 'Host Grotesk', sans-serif;
+      font-size: 15px;
+      color: var(--green);
+      background: var(--white);
+      outline: none;
+    }
+    .email-form input:focus { border-color: var(--green); }
+    .email-form input::placeholder { color: rgba(51,71,59,0.4); }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--green);
+      color: var(--white);
+      padding: 72px 64px 40px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+    .footer-brand .footer-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+      margin-bottom: 20px;
+    }
+    .footer-logo .vita {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 24px;
+      color: var(--white);
+    }
+    .footer-logo .hydra {
+      font-family: 'Host Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--white);
+    }
+    .footer-tagline {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      max-width: 280px;
+    }
+    .footer-col h5 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .social-icon:hover { background: rgba(255,255,255,0.2); }
+
+    /* ── USP MOVING BANNER ────────────────────────────────────── */
+    .usp-banner {
+      background: var(--coral);
+      padding: 14px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .usp-track {
+      display: inline-flex;
+      gap: 0;
+      animation: marquee 30s linear infinite;
+    }
+    .usp-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 32px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .usp-item .sep { opacity: 0.5; font-size: 18px; }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── ABOUT SECTION ────────────────────────────────────────── */
+    .about {
+      padding: 100px 64px;
+      background: var(--white);
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: linear-gradient(160deg, var(--lblue) 0%, var(--purple) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .about-content .section-sub { margin-bottom: 32px; }
+    .about-pillars {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .pillar {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── HAMBURGER MENU (mobile only) ────────────────────────── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--green);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 200;
+      flex-direction: column;
+      padding: 24px;
+      gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: var(--green);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .mobile-menu nav-logo { text-decoration: none; }
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .mobile-nav-links li {
+      border-bottom: 1px solid rgba(51,71,59,0.08);
+    }
+    .mobile-nav-links a {
+      display: block;
+      padding: 20px 0;
+      font-size: 24px;
+      font-family: Georgia, serif;
+      color: var(--green);
+      text-decoration: none;
+    }
+    .mobile-menu-cta {
+      margin-top: 40px;
+    }
+    .mobile-menu-cta .btn-primary {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* ── TABLET (≤ 1024px) ────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 32px; }
+      .hero { padding: 60px 32px 48px; }
+      .hero h1 { font-size: 56px; }
+      .flavours { padding: 72px 32px; }
+      .benefits { padding: 72px 32px; }
+      .how-it-works { padding: 72px 32px; }
+      .press { padding: 48px 32px; }
+      .testimonials { padding: 72px 32px; }
+      .about { padding: 72px 32px; }
+      .email-capture { padding: 64px 32px; }
+      footer { padding: 56px 32px 32px; }
+      .lifestyle-overlay { padding: 48px; }
+      .lifestyle-content .section-title { font-size: 44px; }
+      .section-title { font-size: 44px; }
+      .benefits-inner { gap: 48px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    /* ── MOBILE (≤ 768px) ─────────────────────────────────────── */
+    @media (max-width: 768px) {
+
+      /* Promobar — single message, smaller text */
+      .promobar { font-size: 11px; padding: 9px 16px; }
+      .promobar .hide-mobile { display: none; }
+
+      /* Nav — hide links, show hamburger */
+      nav {
+        padding: 0 20px;
+        height: 60px;
+      }
+      .nav-links { display: none; }
+      .nav-actions { gap: 12px; }
+      .nav-actions .hide-mobile { display: none; }
+      .btn-nav { padding: 8px 16px; font-size: 12px; }
+      .nav-hamburger { display: flex; }
+
+      /* Hero — single column, content first */
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 40px 20px 48px;
+        gap: 40px;
+      }
+      .hero h1 { font-size: 48px; }
+      .hero-sub { font-size: 16px; }
+      .hero-image { order: -1; }
+      .hero-image img { max-width: 100%; border-radius: 20px; }
+      .hero-badge { font-size: 11px; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-primary { width: 100%; text-align: center; padding: 16px 24px; }
+
+      /* Trust strip — horizontal scroll */
+      .trust-strip {
+        padding: 16px 20px;
+        gap: 0;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .trust-strip::-webkit-scrollbar { display: none; }
+      .trust-item { flex-shrink: 0; padding: 0 16px; font-size: 11px; }
+      .trust-divider { flex-shrink: 0; }
+
+      /* Section titles */
+      .section-title { font-size: 36px; }
+      .section-sub { font-size: 15px; }
+
+      /* Flavours — single column */
+      .flavours { padding: 60px 20px; }
+      .flavours-header { margin-bottom: 40px; }
+      .flavours-grid { grid-template-columns: 1fr; gap: 20px; }
+      .flavour-card .card-bg { height: 280px; }
+
+      /* USP banner — smaller text */
+      .usp-item { font-size: 11px; padding: 0 20px; }
+
+      /* Benefits — single column, stats 2-col */
+      .benefits { padding: 60px 20px; }
+      .benefits-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .benefits-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .stat-card { padding: 24px 20px; }
+      .stat-card .stat-number { font-size: 44px; }
+
+      /* How it works — single column, no connector line */
+      .how-it-works { padding: 60px 20px; }
+      .hiw-header { margin-bottom: 48px; }
+      .hiw-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hiw-steps::before { display: none; }
+
+      /* Press logos — wrap and smaller */
+      .press { padding: 40px 20px; }
+      .press-logos { gap: 24px; }
+      .press-logo { font-size: 16px; }
+
+      /* Lifestyle — taller, text at bottom */
+      .lifestyle { height: 500px; }
+      .lifestyle-overlay {
+        background: linear-gradient(0deg, rgba(51,71,59,0.85) 0%, transparent 60%);
+        align-items: flex-end;
+        padding: 32px 24px;
+      }
+      .lifestyle-content .section-title { font-size: 32px; }
+      .lifestyle-content .section-sub { font-size: 14px; margin-bottom: 24px; }
+
+      /* Testimonials — single column */
+      .testimonials { padding: 60px 20px; }
+      .testimonials-header { margin-bottom: 40px; }
+      .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+      .review-card { padding: 24px; }
+
+      /* About — single column, image first */
+      .about { padding: 60px 20px; }
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .about-image { aspect-ratio: 16/9; }
+
+      /* Email capture */
+      .email-capture { padding: 60px 20px; }
+      .email-capture .section-title { font-size: 32px; }
+      .email-form {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .email-form .btn-primary { text-align: center; }
+
+      /* Footer — single column */
+      footer { padding: 48px 20px 28px; }
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 40px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    /* ── SMALL MOBILE (≤ 390px) ───────────────────────────────── */
+    @media (max-width: 390px) {
+      .hero h1 { font-size: 40px; }
+      .section-title { font-size: 30px; }
+      .benefits-stats { grid-template-columns: 1fr; }
+      .stat-card .stat-number { font-size: 48px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── PROMOBAR ─────────────────────────────────────────────── -->
+  <div class="promobar">
+    Free shipping on orders over $50 <span class="hide-mobile">✦</span><span class="hide-mobile"> Subscribe &amp; Save 20% </span><span class="hide-mobile">✦</span><span class="hide-mobile"> 30-Day Money Back Guarantee</span>
+  </div>
+
+  <!-- ── NAVIGATION ───────────────────────────────────────────── -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <span class="vita">vita</span>
+      <span class="hydra">hydra</span>
+      <sup>™</sup>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Flavours</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="hide-mobile">Account</a>
+      <a href="#">Cart (0)</a>
+      <a href="#" class="btn-nav hide-mobile">Shop Now</a>
+      <button class="nav-hamburger" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ───────────────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="#" class="nav-logo">
+        <span class="vita">vita</span>
+        <span class="hydra">hydra</span>
+        <sup style="font-size:10px;color:rgba(51,71,59,0.5);margin-left:1px;">™</sup>
+      </a>
+      <button class="mobile-menu-close" id="menuClose">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#" onclick="document.getElementById('mobileMenu').classList.remove('open')">Shop</a></li>
+      <li><a href="#" onclick="document.getElementById('mobileMenu').classList.remove('open')">Flavours</a></li>
+      <li><a href="#" onclick="document.getElementById('mobileMenu').classList.remove('open')">Science</a></li>
+      <li><a href="#" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('menuClose').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  </script>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        New — Tropical Zing just dropped
+      </div>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span><strong>4.8</strong> from 12,400+ reviews</span>
+      </div>
+      <h1 class="display">
+        Hydrate.<br>
+        <em>Recharge.</em><br>
+        Thrive.
+      </h1>
+      <p class="hero-sub">
+        Premium electrolyte sachets with 60+ essential nutrients. Minimal, portable, purposeful — feel your best anywhere, anytime.
+      </p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary">Shop All Flavours</a>
+        <a href="#" class="btn-secondary">See the Science</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/bottles_water.webp" alt="Vita Hydra bottles floating in water" />
+    </div>
+  </section>
+
+  <!-- ── TRUST STRIP ──────────────────────────────────────────── -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <span class="icon">✓</span>
+      Free UK Shipping
+    </div>
+    <span class="trust-divider">·</span>
+    <div class="trust-item">
+      <span class="icon">✓</span>
+      60+ Nutrients
+    </div>
+    <span class="trust-divider">·</span>
+    <div class="trust-item">
+      <span class="icon">✓</span>
+      No Artificial Colours
+    </div>
+    <span class="trust-divider">·</span>
+    <div class="trust-item">
+      <span class="icon">✓</span>
+      30-Day Guarantee
+    </div>
+    <span class="trust-divider">·</span>
+    <div class="trust-item">
+      <span class="icon">✓</span>
+      Subscribe &amp; Save 20%
+    </div>
+  </div>
+
+  <!-- ── FLAVOURS ─────────────────────────────────────────────── -->
+  <section class="flavours">
+    <div class="flavours-header">
+      <p class="section-label">Our Range</p>
+      <h2 class="section-title display">Flavours to Energize You</h2>
+      <p class="section-sub">Three vibrant blends, each crafted to replenish, restore and revitalise — wherever life takes you.</p>
+    </div>
+    <div class="flavours-grid">
+
+      <!-- Citrus Boost -->
+      <div class="flavour-card card-citrus">
+        <div class="card-bg">
+          <div class="sachet-visual">
+            <div class="sachet-top"></div>
+            <div class="sachet-logo">
+              <div><em style="font-family:Georgia,serif;font-style:italic;">vita</em></div>
+              <div class="hydra-text">hydra</div>
+              <div class="sachet-flavour">Citrus Boost</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-info">
+          <h3 class="flavour-name display">Citrus Boost</h3>
+          <p class="flavour-desc">Zesty citrus with a burst of Vitamin C, B-vitamins and electrolytes for sustained energy.</p>
+          <div class="flavour-price">
+            <span class="original">£24.99</span>£19.99
+            <span class="badge">SAVE 20%</span>
+          </div>
+          <button class="btn-card">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Berry Charge -->
+      <div class="flavour-card card-berry">
+        <div class="card-bg">
+          <div class="sachet-visual">
+            <div class="sachet-top"></div>
+            <div class="sachet-logo">
+              <div><em style="font-family:Georgia,serif;font-style:italic;">vita</em></div>
+              <div class="hydra-text">hydra</div>
+              <div class="sachet-flavour">Berry Charge</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-info">
+          <h3 class="flavour-name display">Berry Charge</h3>
+          <p class="flavour-desc">Rich berry antioxidants with magnesium and zinc to support recovery and immune health.</p>
+          <div class="flavour-price">
+            <span class="original">£24.99</span>£19.99
+            <span class="badge">SAVE 20%</span>
+          </div>
+          <button class="btn-card">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Tropical Zing -->
+      <div class="flavour-card card-tropical">
+        <div class="card-bg">
+          <div class="sachet-visual">
+            <div class="sachet-top"></div>
+            <div class="sachet-logo">
+              <div><em style="font-family:Georgia,serif;font-style:italic;">vita</em></div>
+              <div class="hydra-text">hydra</div>
+              <div class="sachet-flavour">Tropical Zing</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-info">
+          <h3 class="flavour-name display">Tropical Zing</h3>
+          <p class="flavour-desc">Exotic tropical blend with coconut electrolytes and adaptogens for deep cellular hydration.</p>
+          <div class="flavour-price">
+            <span class="original">£24.99</span>£19.99
+            <span class="badge">SAVE 20%</span>
+          </div>
+          <button class="btn-card">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── USP MOVING BANNER ────────────────────────────────────── -->
+  <div class="usp-banner">
+    <div class="usp-track">
+      <span class="usp-item">Hydrate <span class="sep">|</span> Recharge <span class="sep">|</span> Thrive</span>
+      <span class="usp-item">60+ Essential Nutrients <span class="sep">|</span> Zero Artificial Colours</span>
+      <span class="usp-item">Portable Sachets <span class="sep">|</span> Anywhere, Anytime</span>
+      <span class="usp-item">Subscribe &amp; Save 20% <span class="sep">|</span> Free UK Shipping</span>
+      <span class="usp-item">Hydrate <span class="sep">|</span> Recharge <span class="sep">|</span> Thrive</span>
+      <span class="usp-item">60+ Essential Nutrients <span class="sep">|</span> Zero Artificial Colours</span>
+      <span class="usp-item">Portable Sachets <span class="sep">|</span> Anywhere, Anytime</span>
+      <span class="usp-item">Subscribe &amp; Save 20% <span class="sep">|</span> Free UK Shipping</span>
+    </div>
+  </div>
+
+  <!-- ── BENEFITS ─────────────────────────────────────────────── -->
+  <section class="benefits">
+    <div class="benefits-inner">
+      <div class="benefits-content">
+        <p class="section-label">Why Vita Hydra</p>
+        <h2 class="section-title display">Comprehensive Nutrition, Simplified.</h2>
+        <p class="section-sub">Most people are chronically dehydrated and nutrient-deficient. Vita Hydra fills the gaps — one sachet at a time.</p>
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">💧</div>
+            <div class="benefit-text">
+              <h4>Deep Cellular Hydration</h4>
+              <p>Electrolytes and minerals that work at a cellular level to restore optimal hydration faster than water alone.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-text">
+              <h4>Sustained Energy</h4>
+              <p>B-vitamins and adaptogens that support natural energy production without the crash of caffeine.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-text">
+              <h4>Immune Support</h4>
+              <p>Vitamin C, D, and Zinc in every sachet to keep your immune system performing at its peak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="benefits-stats">
+        <div class="stat-card">
+          <div class="stat-number">60+</div>
+          <div class="stat-label">Essential nutrients in every sachet</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Of users report improved hydration within 7 days</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Artificial colours, flavours or sweeteners</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">30</div>
+          <div class="stat-label">Day money-back guarantee, no questions asked</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ─────────────────────────────────────────── -->
+  <section class="how-it-works">
+    <div class="hiw-inner">
+      <div class="hiw-header">
+        <p class="section-label">Simple by Design</p>
+        <h2 class="section-title display">Hydration in 3 Steps</h2>
+        <p class="section-sub">No shakers. No mess. No excuses. Just tear, pour, and thrive.</p>
+      </div>
+      <div class="hiw-steps">
+        <div class="hiw-step step-1">
+          <div class="step-number">1</div>
+          <h3 class="display">Tear the Sachet</h3>
+          <p>Each sachet is pre-measured for a perfect 500ml serving. Compact enough to fit in any pocket or bag.</p>
+        </div>
+        <div class="hiw-step step-2">
+          <div class="step-number">2</div>
+          <h3 class="display">Pour &amp; Mix</h3>
+          <p>Add to cold water and stir for 10 seconds. The formula dissolves instantly with no clumping.</p>
+        </div>
+        <div class="hiw-step step-3">
+          <div class="step-number">3</div>
+          <h3 class="display">Hydrate &amp; Thrive</h3>
+          <p>Feel the difference within minutes. 60+ nutrients absorbed rapidly for peak performance and recovery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRESS ────────────────────────────────────────────────── -->
+  <div class="press">
+    <p class="press-label">As featured in</p>
+    <div class="press-logos">
+      <span class="press-logo">Vogue</span>
+      <span class="press-logo">GQ</span>
+      <span class="press-logo">Men's Health</span>
+      <span class="press-logo">Glamour</span>
+      <span class="press-logo">Women's Health</span>
+    </div>
+  </div>
+
+  <!-- ── LIFESTYLE IMAGE ─────────────────────────────────────── -->
+  <section class="lifestyle">
+    <img src="assets/bottles_water.webp" alt="Vita Hydra lifestyle" />
+    <div class="lifestyle-overlay">
+      <div class="lifestyle-content">
+        <p class="section-label">Minimal. Portable. Purposeful.</p>
+        <h2 class="section-title display">Hydration That Goes Where You Go</h2>
+        <p class="section-sub">Designed for modern life — whether you're at the gym, the office, or on the move.</p>
+        <a href="#" class="btn-primary">Shop the Range</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ─────────────────────────────────────────── -->
+  <section class="testimonials">
+    <div class="testimonials-header">
+      <p class="section-label">Real Results</p>
+      <h2 class="section-title display">What Our Community Says</h2>
+      <p class="section-sub">Over 12,000 five-star reviews from people who've made Vita Hydra part of their daily routine.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I've tried every hydration product on the market. Vita Hydra is the first one that actually makes me feel different — more alert, less fatigued. I take Citrus Boost every morning now."</p>
+        <div class="review-author">
+          <div class="review-avatar av-1">SJ</div>
+          <div class="review-author-info">
+            <div class="name">Sarah J.</div>
+            <div class="verified">Verified Buyer · Citrus Boost</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The Berry Charge is genuinely delicious — not that artificial sweetness you get with other brands. Clean ingredients, great taste, and I've noticed a real difference in my recovery after training."</p>
+        <div class="review-author">
+          <div class="review-avatar av-2">MT</div>
+          <div class="review-author-info">
+            <div class="name">Marcus T.</div>
+            <div class="verified">Verified Buyer · Berry Charge</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The packaging alone sold me — it's so beautiful. But the product is even better. Tropical Zing has become my afternoon ritual. Genuinely feel more hydrated and energised."</p>
+        <div class="review-author">
+          <div class="review-avatar av-3">EL</div>
+          <div class="review-author-info">
+            <div class="name">Emma L.</div>
+            <div class="verified">Verified Buyer · Tropical Zing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-image">
+        <img src="assets/product_box.webp" alt="Vita Hydra product range" />
+      </div>
+      <div class="about-content">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title display">Built for the Way You Live</h2>
+        <p class="section-sub">We started Vita Hydra because we were tired of hydration products that were either full of artificial junk, or so clinical they felt like medicine. We wanted something that was premium, portable, and actually worked.</p>
+        <p class="section-sub" style="margin-top:16px;">Every sachet is formulated with 60+ nutrients, tested rigorously, and designed to be the cleanest, most effective hydration product on the market.</p>
+        <div class="about-pillars" style="margin-top:32px;">
+          <span class="pillar">Clean Ingredients</span>
+          <span class="pillar">Clinically Dosed</span>
+          <span class="pillar">Lab Tested</span>
+          <span class="pillar">Sustainably Packaged</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EMAIL CAPTURE ────────────────────────────────────────── -->
+  <section class="email-capture">
+    <p class="section-label">Join the Community</p>
+    <h2 class="section-title display">Get 15% Off Your First Order</h2>
+    <p class="section-sub">Sign up for early access to new flavours, exclusive offers, and hydration tips from our nutritionists.</p>
+    <div class="email-form">
+      <input type="email" placeholder="Your email address" />
+      <a href="#" class="btn-primary" style="white-space:nowrap;">Claim Discount</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="vita">vita</span>
+          <span class="hydra">hydra</span>
+          <sup style="font-size:10px;color:rgba(255,255,255,0.5);margin-left:1px;">™</sup>
+        </div>
+        <p class="footer-tagline">Hydrate · Recharge · Thrive</p>
+        <p>Premium electrolyte hydration sachets crafted with 60+ essential nutrients. Minimal, portable, purposeful.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#">Citrus Boost</a></li>
+          <li><a href="#">Berry Charge</a></li>
+          <li><a href="#">Tropical Zing</a></li>
+          <li><a href="#">Starter Bundle</a></li>
+          <li><a href="#">Subscribe &amp; Save</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Science</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Vita Hydra™. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon">ig</a>
+        <a href="#" class="social-icon">tt</a>
+        <a href="#" class="social-icon">fb</a>
+        <a href="#" class="social-icon">yt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
